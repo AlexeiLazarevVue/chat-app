@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import { ref } from 'vue'
 import { getUserList } from '../api/getUserList'
 export default {
   async setup() {
