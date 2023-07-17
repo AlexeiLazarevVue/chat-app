@@ -1,7 +1,11 @@
 <template>
   <div class="user-list">
-    <div v-for="user in users" :key="user.id" class="user-list__item">
-      <h1>{{ user.username }}</h1>
+    <div @click="$router.push('/#')" v-for="user in users" :key="user.id" class="user">
+      <img src="https://i.pngimg.me/thumb/f/350/comdlpng6952232.jpg" class="user__image" alt="">
+      <div class="user__text-data">
+        <p>{{ user.username }}</p>
+        <p class="user__last-message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id excepturi officia debitis, dolor veritatis illum.</p>
+      </div>
     </div>
   </div>
 </template>
@@ -19,6 +23,37 @@ export default {
 }
 </script>
 
-<style>
-  
+<style lang="less" scoped>
+  .user-list {
+    height: 100vh;
+    width: 100%;
+    background: #15242b;
+    .user {
+      display: flex;
+      height: 70px;
+      padding: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        background: #203742;
+      }
+      &__image {
+        width: 50px;
+        border-radius: 100%;
+      }
+      &__text-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3px 10px;
+      }
+      &__last-message {
+        white-space: nowrap;
+        font-size: 14px;
+        color: #e9e8e876;
+        font-weight: 300;
+      }
+    }
+  }
 </style>

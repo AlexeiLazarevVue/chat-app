@@ -17,4 +17,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.message-page {
+  display: flex;
+  &__sidebar {
+    width: 40vw;
+  }
+}
 </style>
