@@ -27,7 +27,7 @@ export default {
   .user-list {
     height: 100vh;
     width: 100%;
-    background: #15242b;
+    background: #17212b;
     .user {
       display: flex;
       height: 70px;
@@ -36,7 +36,7 @@ export default {
       cursor: pointer;
       transition: 0.2s;
       &:hover {
-        background: #203742;
+        background: #2b5278;
       }
       &__image {
         width: 50px;
